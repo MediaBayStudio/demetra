@@ -1,0 +1,43 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.sect-404 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  color: $darkGreen;
+
+  &__presentation {
+    height: 150px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: flex-end;
+    font: 700 160px/130% $secondFont;
+
+
+    &-center-img {
+      display: flex;
+      width: 107px;
+      height: 107px;
+      margin: 0 10px 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font: 700 24px/130% $secondFont;
+  }
+
+  &__descr {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font: 400 14px/130% $mainFont;
+  }
+
+  .btn {
+    width: 250px;
+  }
+}

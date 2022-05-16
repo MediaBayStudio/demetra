@@ -1,0 +1,36 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-company {
+  flex-flow: row wrap;
+
+  &__suptitle {
+    width: 100%;
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__img {
+    max-width: 360px;
+    flex: 1;
+    order: 1;
+    margin-left: auto;
+
+    &::after {
+      top: 32px;
+      height: 58%;
+      // height: 70%;
+      width: calc((50vw - 330px) + 370px);
+      right: calc((50vw - 350px) * -1);
+    }
+  }
+
+  &__descr {
+    width: 295px;
+    margin: 15px 40px 0 0;
+  }
+}

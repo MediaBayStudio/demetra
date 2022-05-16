@@ -1,0 +1,13 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-hero {
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  &__title {
+    font-size: 55px;
+    margin-bottom: 20px;
+  }
+}

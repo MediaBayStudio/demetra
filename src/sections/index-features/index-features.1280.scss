@@ -1,0 +1,19 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-features {
+  &__list {
+    flex: 1;
+    margin-right: -60px;
+  }
+
+  &__item {
+    width: calc(100% / 2 - 60px);
+    margin-right: 60px;
+
+    &-img {
+      margin-right: 30px;
+    }
+  }
+}

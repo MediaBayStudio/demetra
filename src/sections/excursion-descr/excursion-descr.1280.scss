@@ -1,0 +1,40 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.excursion-descr {
+  padding-top: 30px;
+  flex-flow: row wrap;
+
+  &__gallery {
+
+    &-wrapper {
+      width: 496px;
+    }
+
+    &-current-lg-preview {
+      height: 337px;
+      margin-bottom: 20px;
+    }
+
+    &-item {
+      width: 154px;
+      height: 118px;
+      margin-right: 19px;
+    }
+  }
+
+  &__inner {
+    max-width: 593px;
+  }
+
+  &__duration,
+  &__price,
+  &__descr {
+    font-size: 16px;
+  }
+
+  &__descr {
+    line-height: 145%;
+  }
+}

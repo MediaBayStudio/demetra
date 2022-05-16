@@ -1,0 +1,40 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.request-popup {
+  &__wrapper {
+    align-items: center;
+  }
+
+  &__inner {
+    padding: 55px 15px 100px;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+    font-size: 15px;
+    max-width: 397px;
+  }
+
+  &__form-wrapper {
+
+    .field {
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      margin-left: auto;
+      max-width: 199px;
+
+      svg {
+        width: 21px;
+        height: 21px;
+      }
+    }
+  }
+}

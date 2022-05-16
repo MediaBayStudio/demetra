@@ -1,0 +1,69 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.excursion-programm {
+  &__list {
+    font-size: 16px;
+    line-height: 140%;
+
+    &-item {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .programm-info {
+    padding: 30px 42px;
+
+    &__item {
+
+      &_location {
+        width: 100%;
+      }
+
+      &_schedule {
+        width: 50%;
+      }
+
+      &_duration {
+        width: 50%;
+      }
+
+      &_price-inc {
+        width: 100%;
+      }
+    }
+
+    &__point {
+      font-size: 15px;
+    }
+  }
+
+  &__add-info {
+    font-size: 16px;
+  }
+
+  .price-includes {
+    flex-flow: row wrap;
+
+    &__item {
+      width: 50%;
+      margin-right: 20px;
+      font-size: 15px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+        width: calc(100% / 2 - 20px);
+      }
+
+      &:nth-last-child(-n+2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__map {
+    height: 190px;
+  }
+}

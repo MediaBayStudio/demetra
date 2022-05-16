@@ -1,0 +1,45 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-reviews__list {
+  position: relative;
+
+  .slick-list {
+    overflow: hidden;
+  }
+
+  &-item {
+    margin-right: 29px;
+  }
+
+  &-arrow {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    transform: translateY(-50%);
+    color: $darkGreen;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  &-prev {
+    left: -20px;
+  }
+
+  &-next {
+    right: 0;
+  }
+}
+
+.inst-post-card {
+
+  &__post-text {
+    font-size: 16px;
+  }
+}

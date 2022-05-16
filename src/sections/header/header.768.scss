@@ -1,0 +1,40 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hdr {
+  &__link {
+    margin-right: 70px;
+    width: 80px;
+    height: 93px;
+  }
+
+  &__nav {
+    display: block;
+
+    &-list {
+      flex-flow: row;
+      font-size: 12px;
+    }
+
+    &-li {
+      margin: 0 30px 0 0;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    margin-left: auto;
+    font-size: 12px;
+
+    &::before {
+      width: 15px;
+      height: 15px;
+      margin-right: 4px;
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+}

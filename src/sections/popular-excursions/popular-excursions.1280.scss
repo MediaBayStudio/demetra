@@ -1,0 +1,15 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+@import '../../components/excursion-card/excursion-card.1280.scss';
+
+.popular-excursions {
+  &__list {
+    display: flex;
+
+    &-item {
+      margin-right: 30px;
+      max-width: calc(100% / 3 - 30px);
+    }
+  }
+}

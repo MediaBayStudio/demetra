@@ -1,0 +1,22 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+@import '../../components/search-form/search-form.scss';
+
+.all-excursions {
+  padding-top: 15px;
+  padding-bottom: 80px;
+  margin-bottom: 280px;
+
+  &__title {
+    max-width: 740px;
+    margin: 0 auto;
+    text-align: center;
+    font: 700 20px/130% $secondFont;
+    color: $darkGreen;
+  }
+
+  .search-form {
+    margin: 40px auto -360px;
+  }
+}

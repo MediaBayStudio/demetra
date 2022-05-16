@@ -1,0 +1,53 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hdr {
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  &__link {
+    width: 100px;
+    height: 116px;
+  }
+
+  &__nav {
+    display: block;
+
+    &-list {
+      font-size: 16px;
+    }
+
+    &-li {
+      margin: 0 35px 0 0;
+    }
+  }
+
+  &__tel {
+    font-size: 16px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.fixed {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .hdr {
+      &__nav {
+        margin: 0 0 0 auto;
+
+        &-list {
+          font-size: 14px;
+        }
+      }
+
+      &__tel {
+        font-size: 14px;
+      }
+    }
+  }
+}

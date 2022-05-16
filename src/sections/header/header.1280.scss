@@ -1,0 +1,12 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hdr {
+  padding-top: 40px;
+
+  &__nav {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}

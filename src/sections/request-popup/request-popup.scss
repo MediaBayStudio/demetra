@@ -1,0 +1,82 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.request-popup {
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(5, 9, 12, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+
+    z-index: 5;
+    overflow-y: scroll;
+
+    // &.active {
+    // // &.open {
+    //   opacity: 1;
+    //   visibility: visible;
+    // }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    max-width: 677px;
+    width: 100%;
+    padding: 30px 15px 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: $lightBlue;
+  }
+
+  &__title {
+    margin: 0 auto 15px;
+    font: 700 20px/130% $secondFont;
+    color: $black;
+    text-align: center;
+  }
+
+  &__descr {
+    margin: 0 auto 20px;
+    font: 400 14px/130% $mainFont;
+    text-align: center;
+  }
+
+  &__form-wrapper {
+    max-width: 397px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+
+    .field {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}

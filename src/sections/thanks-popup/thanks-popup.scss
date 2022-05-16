@@ -1,0 +1,30 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.thanks-popup {
+  align-items: center;
+
+  &__cnt {
+    padding: 25px;
+    text-align: center;
+    position: relative;
+  }
+
+  &__close {
+    top: 15px;
+    right: 15px;
+    position: absolute;
+  }
+
+  &__title {
+    margin: 25px 0 20px;
+    display: block;
+    font: 700 20px/130% PlayfairDisplay, serif;
+  }
+
+  &__descr {
+    max-width: 350px;
+    font: 400 14px/130% Manrope, sans-serif;
+  }
+}

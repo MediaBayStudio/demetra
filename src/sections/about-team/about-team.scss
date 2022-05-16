@@ -1,0 +1,43 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-team {
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+    margin-top: -50px;
+
+    &-item {
+      max-width: 260px;
+      margin-right: 20px;
+      margin-top: 50px;
+    }
+  }
+
+  .tour-guide {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+
+    &__img {
+      width: 100%;
+
+      img {
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    &__name {
+      margin: 20px 0 10px;
+      font: 700 14px/130% $secondFont;
+      color: $darkGreen;
+    }
+
+    &__descr {
+      font: 400 14px/130% $mainFont;
+      color: $black;
+    }
+  }
+}

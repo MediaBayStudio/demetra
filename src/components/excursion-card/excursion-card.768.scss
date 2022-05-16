@@ -1,0 +1,32 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.excursion-card {
+
+  &__img {
+    &-link {
+      height: 225px;
+    }
+  }
+
+  &__info {
+    padding: 20px 20px 30px 20px;
+  }
+
+  &__duration {
+    font-size: 16px;
+  }
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__descr {
+    font-size: 15px;
+  }
+
+  &__more {
+    font-size: 16px;
+  }
+}

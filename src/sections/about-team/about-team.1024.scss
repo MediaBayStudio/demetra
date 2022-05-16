@@ -1,0 +1,19 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-team {
+  &__list {
+    &-item {
+      margin-right: 30px;
+      max-width: calc((100% - 60px) / 3);
+    }
+  }
+
+  .tour-guide {
+
+    &__descr {
+      font-size: 16px;
+    }
+  }
+}

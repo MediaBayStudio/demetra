@@ -1,0 +1,35 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-features {
+  flex-flow: row wrap;
+
+  &__suptitle {
+    width: 100%;
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    width: 290px;
+    margin: 60px 90px 0 0;
+  }
+
+  &__list {
+    flex: 1;
+    margin-right: -40px;
+  }
+
+  &__item {
+    &-img {
+      margin-right: 20px;
+    }
+
+    &-descr {
+    }
+  }
+}

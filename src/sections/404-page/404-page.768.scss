@@ -1,0 +1,27 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.sect-404 {
+  &__presentation  {
+    height: 240px;
+    font-size: 300px;
+
+    &-center-img {
+      width: 220px;
+      height: 220px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__descr {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 200px;
+  }
+}

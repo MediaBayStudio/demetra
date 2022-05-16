@@ -1,0 +1,35 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+@import '../../components/search-form/search-form.1280.scss';
+
+.index-hero {
+  margin-bottom: 140px;
+  &__inner {
+    padding: 100px 0 140px;
+  }
+
+  &__title {
+    font-size: 64px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    max-width: 385px;
+  }
+
+  &__img {
+
+    &-left {
+      width: 307px;
+    }
+
+    &-right {
+      max-width: 465px;
+    }
+  }
+
+  .search-form {
+    max-width: 962px;
+  }
+}

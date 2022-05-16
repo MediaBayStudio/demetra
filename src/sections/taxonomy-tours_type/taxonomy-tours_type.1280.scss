@@ -1,0 +1,48 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.tours {
+  &__title {
+    font-size: 30px;
+  }
+
+  &__list {
+    margin-top: -15px;
+
+    &-item {
+      margin-top: 40px;
+    }
+  }
+}
+
+.tour {
+  &__title {
+    padding: 0 30px;
+  }
+
+  &__bottom {
+    padding: 30px;
+  }
+
+  &__gallery {
+    &-wrapper {
+      margin-right: 30px;
+      width: 436px;
+    }
+
+    &-item {
+      width: 135px;
+      height: 89px;
+      margin-right: 15px;
+    }
+  }
+
+  &__info {
+    max-width: 633px;
+  }
+
+  &__descr {
+    font-size: 16px;
+  }
+}

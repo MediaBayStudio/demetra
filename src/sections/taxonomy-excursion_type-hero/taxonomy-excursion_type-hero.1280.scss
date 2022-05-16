@@ -1,0 +1,12 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+@import '../../components/search-form/search-form.1280.scss';
+
+.all-excursions {
+  padding-top: 20px;
+
+  .search-form {
+    max-width: 962px;
+  }
+}

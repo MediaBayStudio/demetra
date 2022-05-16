@@ -1,0 +1,80 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  flex-flow: row wrap;
+
+  &__logo {
+    margin: 0 135px 0 0;
+  }
+
+  &__nav {
+    display: block;
+
+    &-list {
+      display: flex;
+      text-transform: uppercase;
+      font: 700 12px/130% $mainFont;
+      color: $white;
+    }
+
+    &-li {
+      position: relative;
+      margin-right: 30px;
+      transition: color .25s;
+
+      &:hover {
+        color: $yellow;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.current {
+        &::after {
+          content: '';
+          position: absolute;
+          width: 40%;
+          height: 1px;
+          background-color: $white;
+          bottom: -3px;
+          left: 30%;
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    display: none;
+  }
+
+  &__socials {
+    flex: 0 1 auto;
+    margin: 0 auto;
+  }
+
+  &__rights {
+    flex: 0 1 auto;
+    order: -1;
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+
+    &-policy {
+      order: -1;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__dev {
+    flex: 0 1 auto;
+    margin: 0;
+    align-items: flex-start;
+
+    &-link {
+      margin-top: 2px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-features {
+  display: flex;
+  flex-flow: column;
+
+  &__descr {
+    width: 245px;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+    font: 700 14px/150% $secondFont;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    &-img {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin-right: 25px;
+      object-fit: contain;
+    }
+
+    &-descr {
+      max-width: 200px;
+    }
+  }
+}

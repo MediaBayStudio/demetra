@@ -1,0 +1,31 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-reviews__list {
+  &-item {
+    width: 367px;
+  }
+
+  &-arrow {
+    font-size: 20px;
+    transition: opacity .15s;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &-prev {
+    left: -25px;
+  }
+
+  &-next {
+    right: -25px;
+  }
+}

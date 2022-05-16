@@ -1,0 +1,28 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  font-size: 16px;
+
+  &__logo {
+    margin-right: 150px;
+  }
+
+  &__nav {
+    &-list {
+      font-size: 16px;
+    }
+
+    &-li {
+      margin-right: 40px;
+    }
+  }
+
+  &__dev {
+    &-link {
+      margin-top: 3px;
+      margin-left: 10px;
+    }
+  }
+}

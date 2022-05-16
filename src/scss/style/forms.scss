@@ -1,0 +1,323 @@
+@import '../assets/colors';
+@import '../assets/mixins';
+@import '../assets/variables';
+
+// Сообщение об ошибке заполнения поля
+label.invalid {
+  position: absolute;
+  bottom: -15px;
+  // top: calc(100% + 5px);
+  left: 0;
+  font: normal 10px/150% sans-serif;
+  color: $error;
+}
+
+// Если ошибка, то можно подчеркнуть поле
+.field__inp.invalid,
+.field__textarea.invalid {
+  border-color: $error;
+}
+
+// Рассчет размера нужен для ограничения ширины блока
+// чтобы сообщение об ошибке вставало корректно
+$checkbox_size: 14px;
+$checkbox_margin_right: 15px;
+$checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
+// $checkbox_border_radius: 0;
+
+form {
+  transition: opacity .5s;
+
+  &.loading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.check {
+  display: flex;
+  cursor: pointer;
+
+  &_tick {
+    // Чекбокс с галочкой
+    width: 100%;
+    align-items: flex-start;
+    //max-width: 280px;
+    flex-wrap: wrap;
+    font: 12px/130% $mainFont;
+
+    >.check__text {
+      max-width: 310px;
+      width: $checkbox_text_width;
+    }
+
+    >.check__inp {
+      margin: 4px $checkbox_margin_right 0 0;
+      width: $checkbox_size;
+      height: $checkbox_size;
+      background: transparent url('./img/icons/check.svg') center/0 border-box no-repeat;
+      transition: background .25s, border .25s;
+      pointer-events: none;
+      border-radius: 2px;
+      border: 1px solid $yellow;
+
+      &:checked {
+        background-color: $yellow;
+        background-size: 100%;
+      }
+
+      &:focus {
+        border-color: $darkGreen;
+      }
+    }
+  }
+
+  &_fill {
+    // Чекбокс с заполнением цветом
+    align-items: center;
+
+    >.check__text {}
+
+    >.check__inp {
+      margin: 0 15px 0 0;
+      width: 14px;
+      height: 14px;
+      // box-shadow: inset 0 0 0 10px $white;
+      // background: $green;
+      transition: box-shadow .5s;
+
+      &:checked {
+        // box-shadow: inset 0 0 0 2px $white;
+      }
+    }
+  }
+
+  >label.invalid {
+    position: static;
+    margin: 4px 0 -4px $checkbox_size + $checkbox_margin_right;
+    max-width: $checkbox_text_width;
+    order: 10;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__inp {
+    appearance: none;
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  &__text,
+  &__link {
+    display: inline-block;
+    color: $gray2;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+}
+
+.field {
+  display: inline-flex;
+  flex-flow: column;
+  font: 14px/130% $mainFont;
+  position: relative;
+
+  &__textarea,
+  &__inp {
+    height: 52px;
+    padding: 15px 10px;
+    background-color: $white;
+    color: $black;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font: 14px/130% $mainFont;
+
+    &::placeholder {
+      color: $gray;
+    }
+
+    &.filled,
+    &:focus {
+      border-color: $darkGreen;
+      // &:focus.valid,
+      // &.filled.valid {
+      // border-bottom-color: $black;
+
+      ~.field__text {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__inp {
+    &-date {
+      padding-right: 35px;
+    }
+  }
+
+  &__date {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 18px;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      background: url('img/icons/calendar.svg');
+      pointer-events: none;
+    }
+  }
+
+  &__text {
+    color: $darkGreen;
+    margin-bottom: 10px;
+  }
+
+  &__textarea {
+    height: 114px;
+    resize: none;
+  }
+}
+
+.tail-select {
+  position: relative;
+  border-radius: 10px;
+
+
+  &:focus {
+    border-color: $darkGreen;
+  }
+
+  .select-label {
+    position: relative;
+    height: 52px;
+    background-color: $white;
+    padding: 0 35px 0 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: $black;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: color;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      bottom: 16px;
+      right: 10px;
+      background: url('img/icons/select-arrow.svg') no-repeat center/contain;
+      transition: transform .25s;
+      transform-origin: center;
+    }
+  }
+
+  &.active {
+    &>.select-label {
+      border-color: $darkGreen;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  .select-dropdown {
+    display: none;
+    position: absolute;
+    padding: 10px 0;
+    width: 100%;
+    top: calc(100% - 1px);
+    left: 0;
+    background-color: $white;
+    border: 1px solid $darkGreen;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    transition: height .1s;
+    z-index: 99;
+
+    .dropdown-option {
+      padding: 10px;
+      color: $black;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: color;
+
+      &:hover,
+      &:focus {
+        color: $darkGreen;
+        background-color: $lightBlue;
+      }
+
+      &.selected {
+        color: $gray;
+        cursor: auto;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &.active {
+    .select-label {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .field {
+
+    &__textarea,
+    &__inp {
+      padding: 17px 15px;
+      font-size: 15px;
+    }
+
+    &__inp {
+      &-date {
+        padding-right: 35px;
+      }
+    }
+
+    &__textarea {
+      height: 130px;
+    }
+  }
+}
+
+@media screen and (min-width: 1023.98px) {
+  .check {
+    &_tick {
+      font-size: 14px;
+    }
+  }
+
+  .field {
+    &__inp {
+      height: 55px;
+    }
+
+    &__textarea,
+    &__inp {
+      font-size: 16px;
+    }
+  }
+
+  .tail-select {
+    .select-label {
+      height: 55px;
+    }
+  }
+}

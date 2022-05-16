@@ -1,0 +1,45 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+@import '../../components/search-form/search-form.768.scss';
+
+.index-hero {
+  padding-top: 0;
+  padding-bottom: 0;
+  // margin-bottom: 80px;
+  margin-bottom: 125px;
+
+  &__inner {
+    padding: 60px 0 105px;
+    position: relative;
+  }
+
+  &__title {
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+    font-size: 44px;
+    align-items: center;
+  }
+
+  &__img {
+    position: absolute;
+
+    &-left {
+      display: block;
+      width: 211px;
+      top: 75px;
+      left: 0;
+    }
+
+    &-right {
+      max-width: 280px;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .search-form {
+    margin: 0 auto -80px;
+  }
+}

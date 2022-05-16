@@ -1,0 +1,47 @@
+
+@import '../assets/colors';
+@import '../assets/mixins';
+@import '../assets/variables';
+.btn {
+  height: 52px;
+  padding: 17px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 14px/130% $mainFont;
+  border-radius: 10px;
+  text-transform: uppercase;
+
+  &:focus {
+    border-color: #2B4758;
+  }
+}
+
+.btn-yellow {
+  background-color: $yellow;
+  border: 2px solid $yellow;
+  color: $white;
+  transition: background .25s,
+              color .25s,
+              border .25s;
+
+  &:hover {
+    background-color: $orange;
+    border-color: $orange;
+  }
+
+  &:active {
+    background-color: #E49144;
+    border-color: #E49144;
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+}
+
+@media screen and (min-width: 1023.98px) {
+  .btn {
+    height: 55px;
+    font-size: 16px;
+  }
+}

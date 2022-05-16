@@ -1,0 +1,21 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-company {
+  &__img {
+    margin-top: -80px;
+    max-width: 600px;
+
+    &::after {
+      top: 55px;
+      height: 70%;
+      width: calc((50vw - 350px) + 640px);
+    }
+  }
+
+  &__descr {
+    width: 395px;
+    margin-right: 100px;
+  }
+}

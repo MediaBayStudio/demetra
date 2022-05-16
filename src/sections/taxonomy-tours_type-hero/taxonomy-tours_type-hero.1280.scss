@@ -1,0 +1,17 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.tours-hero {
+  padding-top: 20px;
+
+  &__info {
+
+    &-left {
+      padding-right: 220px;
+      &.lazyloaded {
+        background: url(../img/tours-banner-left-bg.svg) no-repeat 55%/140% 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-reviews__list {
+  display: flex;
+
+  &-item {
+    width: 260px;
+    margin-right: 20px;
+  }
+}
+
+.inst-post-card {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(178, 210, 221, .5);
+
+  &__post-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: background .25s;
+    z-index: 99;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .2);
+    }
+  }
+
+  &__top {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  &__inst-logo {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    object-position: center;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__user-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    &-wrapper {
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      left: calc(50% - 28px);
+      bottom: -28px;
+
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-border {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__bottom {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    padding: 0 20px 20px;
+  }
+
+  &__user-name {
+    display: block;
+    font: 700 14px/130% $mainFont;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  &__post-date {
+    display: block;
+    margin-bottom: 15px;
+    font: 700 14px/130% $secondFont;
+    text-align: center;
+    color: $brown;
+  }
+
+  &__post-text {
+    font: 400 14px/130% $mainFont;
+    margin-bottom: 40px;
+  }
+
+  &__post-count-info {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 17px;
+    display: inline-block;
+    margin-right: 9px;
+  }
+
+  &__post-likes,
+  &__post-comments {
+    display: flex;
+    align-items: center;
+    font: 500 16px/130% $mainFont;
+  }
+
+  &__post-likes {
+    margin-right: 20px;
+  }
+}

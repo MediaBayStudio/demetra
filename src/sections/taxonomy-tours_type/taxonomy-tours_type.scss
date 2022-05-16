@@ -1,0 +1,266 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.filters {
+  width: 100%;
+
+  &-list {
+    display: flex;
+    flex-flow: wrap;
+    font: 14px/1.5 $mainFont;
+
+    .filter {
+      position: relative;
+
+      &-wrapper {
+        display: block;
+      }
+
+      &-view {
+        display: block;
+        padding: 8px 10px;
+        border-radius: 10px;
+        border: 1px solid $darkGreen;
+        transition: background .25s,
+                    color .25s;
+        cursor: pointer;
+      }
+
+      &-radio {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        position: absolute;
+
+        &:checked ~ .filter-view {
+          background-color: $darkGreen;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &-item {
+    display: inline-block;
+    margin-top: 10px;
+
+    &:focus-visible {
+      outline: 1px dotted $darkGreen;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.tours {
+  &__title {
+    margin-bottom: 10px;
+    font: 700 20px/1.5 $secondFont;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin-top: -5px;
+
+    &-item {
+      max-width: 380px;
+      margin: 20px auto 0;
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+.tour {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $light;
+
+  &__title {
+    height: 56px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $lightBlue;
+    font: 700 20px/1.5 $secondFont;
+    color: $black;
+  }
+
+  &__bottom {
+    padding: 20px 15px 30px;
+  }
+
+  &__gallery {
+    margin-bottom: 20px;
+    display: flex;
+
+    .slick-list {
+      overflow: hidden;
+    }
+
+    &-current-lg-preview {
+      display: none;
+    }
+
+    &-item {
+      position: relative;
+      width: 280px;
+      height: 180px;
+      margin-right: 20px;
+      overflow: hidden;
+    }
+
+    &-fancy {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-arrow {
+      cursor: pointer;
+      transition: opacity .15s;
+      display: flex;
+      -webkit-tap-highlight-color: transparent;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  &-type {
+    padding: 0 7px 3px;
+    background-color: $darkGreen;
+    color: $white;
+    font: 700 14px/1.5 $mainFont;
+
+    &-title {
+      display: none;
+    }
+
+    &-info {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: column;
+
+    &-top {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    &-price {
+      display: inline-block;
+      margin-bottom: 10px;
+      font: 700 14px/1.5 $mainFont;
+      color: $yellow;
+    }
+  }
+
+  &__hotel-map-link,
+  &__duration {
+    display: flex;
+    align-items: flex-start;
+    font: 700 14px/1.5 $mainFont;
+    color: $darkGreen;
+
+    &::before {
+      display: inline-block;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__hotel-map-link {
+    margin-bottom: 10px;
+
+    &::before {
+      min-width: 20px;
+      height: 20px;
+      margin-right: 6px;
+    }
+
+    &.lazyloaded {
+      &::before {
+        background-image: url('../img/icons/map-marker-darkgreen.svg');
+      }
+    }
+  }
+
+  &__duration {
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      margin-right: 6px;
+    }
+
+    &.lazyloaded {
+      &::before {
+        background-image: url('../img/icons/calendar.svg');
+      }
+    }
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+    font: 400 14px/1.5 $mainFont;
+
+    &-read-more-btn,
+    &-close-btn  {
+      color: $darkGreen;
+      transition: opacity .25s;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    &-close-btn {
+      margin: 5px 0 0 auto;
+      display: block;
+    }
+  }
+
+  &__learnmore-btn-popup {
+    width: 100%;
+  }
+}

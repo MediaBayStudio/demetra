@@ -1,0 +1,18 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.search-form {
+  padding: 40px 70px 50px;
+
+  .field {
+
+    &__date {
+      width: 268px;
+    }
+
+    &__select {
+      width: 297px;
+    }
+  }
+}

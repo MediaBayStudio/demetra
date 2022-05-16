@@ -1,0 +1,28 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.error-popup {
+  align-items: center;
+  &__cnt {
+    padding: 25px;
+    position: relative;
+    text-align: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__close-svg {}
+
+  &__close-path {}
+
+  &__descr {
+    margin: 20px 0 0;
+    max-width: 350px;
+    font: 400 14px/130% Manrope,sans-serif;
+  }
+}

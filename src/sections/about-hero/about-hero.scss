@@ -1,0 +1,20 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-hero {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: $darkGreen;
+  text-align: center;
+
+  &__title {
+    text-transform: uppercase;
+    font: 700 36px/130% $secondFont;
+    margin-bottom: 25px;
+  }
+
+  &__subtitle {
+    font: 400 16px/130% $mainFont;
+  }
+}

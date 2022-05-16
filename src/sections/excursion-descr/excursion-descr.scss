@@ -1,0 +1,142 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.breadcrumbs {
+  font: 400 12px/130% $mainFont;
+  display: flex;
+  color: $darkGreen;
+  white-space: nowrap;
+
+  &__item {
+    min-width: 100px;
+
+    &:first-child {
+      margin-right: 7px;
+
+      &::after {
+        content: '\2192';
+        margin-left: 5px;
+      }
+    }
+
+    &:last-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.excursion-descr {
+  padding-top: 15px;
+  display: flex;
+  flex-flow: column;
+
+  &__gallery {
+    margin-bottom: 30px;
+    display: flex;
+
+    &-current-lg-preview {
+      display: none;
+    }
+
+    &-item {
+      position: relative;
+      width: 280px;
+      height: 205px;
+      margin-right: 20px;
+      overflow: hidden;
+    }
+
+    &-fancy {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-arrow {
+      cursor: pointer;
+      transition: opacity .15s;
+      display: flex;
+      -webkit-tap-highlight-color: transparent;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__undertitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__duration,
+  &__price {
+    display: inline-block;
+    font: 400 14px/130% $mainFont;
+    color: $darkGreen;
+  }
+
+  &__duration {
+    position: relative;
+    margin-right: 25px;
+    padding-left: 30px;
+    display: inline-flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('../img/icons/clock.svg');
+    }
+  }
+
+  &__price {
+    &::after {
+      content: ' \20BD';
+    }
+  }
+
+  &__descr {
+    font: 400 14px/130% $mainFont;
+    color: $black;
+
+
+    & > p {
+      margin: 0 0 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 30px;
+  }
+}

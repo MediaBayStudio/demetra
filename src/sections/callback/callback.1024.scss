@@ -1,0 +1,26 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.callback {
+  &.lazyloaded {
+    background:
+              url('../img/callback-bg-img-desk.svg') no-repeat 120%/55% 100%,
+              $lightBlue;
+  }
+
+  form {
+    width: 380px;
+    margin-right: 110px;
+
+    .btn {
+      width: 200px;
+    }
+  }
+
+  &__contacts {
+    max-width: 385px;
+    margin-right: auto;
+    padding: 45px 50px;
+  }
+}

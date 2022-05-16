@@ -1,0 +1,9 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.sect-404 {
+  &__descr {
+    font-size: 18px;
+  }
+}

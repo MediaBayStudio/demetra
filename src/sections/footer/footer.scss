@@ -1,0 +1,98 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  padding-top: 50px;
+  padding-bottom: 55px;
+  background-color: $darkGreen;
+  display: flex;
+  flex-flow: column;
+  font: 400 14px/130% $mainFont;
+  color: $white;
+
+  &__top {
+    order: -1;
+    flex: 1 0 100%;
+    display: flex;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $white;
+  }
+
+  &__logo {
+    width: 125px;
+    margin: 0 auto;
+    transition: opacity .25s;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &-img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__nav {
+    display: none;
+    font-weight: 700;
+  }
+
+  &__socials {
+    margin: 0 auto 30px;
+  }
+
+  &__contacts {
+    margin: 0 auto 40px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    &-item {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__rights {
+    flex: 1 1 100%;
+    text-align: center;
+
+    &-copy {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    &-policy {
+      display: block;
+      text-decoration: underline;
+      transition: opacity .25s;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__dev {
+    display: flex;
+    align-items: center;
+    margin: 20px auto 0;
+
+    &-link {
+      display: inline-block;
+      height: 14px;
+      margin-left: 5px;
+      transition: opacity .25s;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}

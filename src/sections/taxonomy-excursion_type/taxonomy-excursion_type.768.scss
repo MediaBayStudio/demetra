@@ -1,0 +1,54 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.filters {
+  &-open-mob-btn {
+    display: none;
+  }
+
+  &-reset-btn {
+    margin-left: auto;
+    font-size: 14px;
+  }
+
+  &-item {
+    margin-top: 15px;
+    font-size: 15px;
+
+    &-desk {
+      display: flex;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__sort-by {
+    .tail-select {
+      font-size: 14px;
+
+      .select-label {
+        &::after {
+          width: 15px;
+          height: 15px;
+          bottom: 12px;
+        }
+      }
+    }
+  }
+}
+
+.display-excursions {
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -20px;
+
+    &-item {
+      max-width: 350px;
+      margin: 20px 20px 0 0;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.excursion-booking  {
+  .form-wrapper {
+    padding: 50px 30px;
+  }
+
+  .booking-form {
+    flex-flow: row wrap;
+
+    &__inner {
+
+      &:nth-child(1) {
+        max-width: 427px;
+        margin-right: 50px;
+      }
+
+      &:nth-child(2) {
+        max-width: 382px;
+        margin-left: auto;
+      }
+
+      .field {
+        max-width: 100%;
+
+        &:nth-child(odd) {
+          margin-right: 0;
+        }
+
+        &.field__date {
+          max-width: 199px;
+          margin-right: 30px !important;
+        }
+
+        &.field__select {
+          max-width: 198px;
+        }
+      }
+    }
+
+    &__total {
+      font-size: 16px;
+    }
+  }
+
+  .age-list {
+    width: 100%;
+    flex-flow: column;
+
+    &-item {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+
+      &__inner {
+        margin: 0;
+        max-width: 199px;
+        width: 100%;
+        margin-right: 30px;
+
+        &:first-child {
+          margin-bottom: 0;
+        }
+
+        &:nth-child(2) {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+
+      &__name,
+      &__price {
+        font-size: 16px;
+      }
+    }
+  }
+}

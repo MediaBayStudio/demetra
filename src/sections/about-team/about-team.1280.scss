@@ -1,0 +1,19 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-team {
+  &__list {
+    &-item {
+      max-width: calc((100% - 90px) / 4);
+
+      &:nth-child(3n+3) {
+        margin-right: auto;
+      }
+
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+  }
+}

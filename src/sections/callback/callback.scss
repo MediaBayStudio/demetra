@@ -1,0 +1,130 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.callback {
+  &.lazyloaded {
+    background:
+      url('../img/callback-bg-img.svg') no-repeat left 105%/100% 30%,
+      $lightBlue;
+
+    .callback__contacts-name {
+
+      &.icon_address {
+        &::before {
+          background-image: url('../img/icons/map-marker.svg');
+        }
+      }
+
+      &.icon_tel {
+        &::before {
+          background-image: url('../img/icons/phone2.svg');
+        }
+      }
+
+      &.icon_email {
+        &::before {
+          background-image: url('../img/icons/email.svg');
+        }
+      }
+    }
+  }
+
+  form {
+
+    .field {
+      width: 100%;
+      margin-bottom: 30px;
+
+      &.field_msg {
+        margin-bottom: 15px;
+      }
+    }
+
+    .check {
+      margin-top: 25px;
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  &__contacts {
+    margin-top: 50px;
+    padding: 30px 15px 25px;
+    background-color: $darkGreen;
+    color: $white;
+
+    &-title {
+      font: 700 16px/130% $secondFont;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    &-item {
+      margin-bottom: 25px;
+      font-family: $mainFont;
+      line-height: 130%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-name {
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+
+      &.icon_address {
+        &::before {
+          background-image: url('../img/icons/map-marker.svg');
+        }
+      }
+
+      &.icon_tel {
+        &::before {
+          background-image: url('../img/icons/phone2.svg');
+        }
+      }
+
+      &.icon_email {
+        &::before {
+          background-image: url('../img/icons/email.svg');
+        }
+      }
+    }
+
+    &-info {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    &-link {
+      transition: color .25s;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+
+  &__socials {
+    margin-top: 20px;
+  }
+}

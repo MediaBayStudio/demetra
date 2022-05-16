@@ -1,0 +1,48 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-company {
+  display: flex;
+  flex-flow: column;
+  overflow-x: hidden;
+
+  &__img {
+    position: relative;
+    display: block;
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      right: -20px;
+      width: 100vw;
+      height: 100%;
+      background-color: $lightBlue;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__descr {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 419.98px) {
+  .about-company {
+    &__img {
+      &::after {
+        right: calc((50vw - 190px) * -1);
+      }
+    }
+  }
+}

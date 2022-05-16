@@ -1,0 +1,32 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.breadcrumbs {
+  font-size: 14px;
+}
+
+.excursion-descr {
+  padding-top: 20px;
+
+  &__gallery {
+    .slick-list {
+      overflow-x: hidden;
+    }
+
+    &-item {
+      width: 350px;
+      height: 253px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__duration,
+  &__price,
+  &__descr {
+    font-size: 15px;
+  }
+}

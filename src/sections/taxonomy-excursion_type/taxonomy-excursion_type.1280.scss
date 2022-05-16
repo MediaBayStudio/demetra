@@ -1,0 +1,12 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.display-excursions {
+  &__list {
+
+    &-item {
+      max-width: calc(100% / 3 - 30px);
+    }
+  }
+}

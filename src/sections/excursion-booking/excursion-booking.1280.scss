@@ -1,0 +1,17 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.excursion-booking {
+  .form-wrapper {
+    padding: 50px 70px;
+  }
+
+  .booking-form {
+    &__inner {
+      &:nth-child(2) {
+        max-width: 426px;
+      }
+    }
+  }
+}

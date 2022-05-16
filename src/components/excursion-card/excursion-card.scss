@@ -1,0 +1,127 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.excursion-card {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: $light;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__img {
+
+    &-link {
+      display: block;
+      height: 210px;
+    }
+
+    &-pic {
+      height: 100%;
+      display: block;
+      transition: opacity .25s;
+
+      &:hover {
+        opacity: .85;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__info {
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: column;
+    padding: 20px 15px 25px 15px;
+  }
+
+  &__duration {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font: 400 14px/130% $mainFont;
+    color: $darkGreen;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__title {
+    margin: 15px 0;
+    font: 700 16px/150% $secondFont;
+
+    &-link {
+      transition: color .25s;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+
+  &__descr {
+    margin-bottom: 25px;
+    font: 400 14px/150% $mainFont;
+  }
+
+  &__bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    font: 700 16px/130% $mainFont;
+  }
+
+  &__price {
+    color: $yellow;
+
+    &::after {
+      content: ' \20BD';
+    }
+  }
+
+  &__more {
+    display: inline-block;
+    margin-left: auto;
+    padding-right: 33px;
+    position: relative;
+    font-size: 14px;
+    color: $darkGreen;
+    transition: color .25s;
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      border: 1px solid currentColor;
+      transform: translateY(-50%) rotate(45deg);
+      border-bottom: none;
+      border-left: none;
+    }
+
+    &::after {
+      content: '';
+      width: 23px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background-color: currentColor;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-team {
+  &__list {
+    &-item {
+      max-width: calc((100% - 40px) / 3);
+
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .tour-guide {
+    &__name {
+      font-size: 16px;
+    }
+
+    &__descr {
+      font-size: 15px;
+    }
+  }
+}

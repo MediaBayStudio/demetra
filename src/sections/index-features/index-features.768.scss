@@ -1,0 +1,30 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-features {
+
+  &__descr {
+    width: 475px;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    margin-right: -40px;
+  }
+
+  &__item {
+    width: calc(100% / 2 - 40px);
+    margin-top: 40px;
+    margin-right: 40px;
+
+    &-img {
+      margin-right: 20px;
+    }
+
+    &-descr {
+      font-size: 16px;
+      max-width: 240px;
+    }
+  }
+}
